@@ -48,6 +48,18 @@ io.sockets.on('connection', function(socket) {
 		socket.on('answer', function(displayName) {
 			io.sockets.in(room).emit('answer received', displayName);
 		});
+
+		socket.on('disconnect', function() {
+			io.sockets.in(room).emit('clear users');
+		});
+
+		socket.on('request users', function() {
+			io.sockets.in(room).emit('name request');
+		});
+
+		socket.on('name received', function(receivedName) {
+			io.sockets.in(room).emit('broadcast name', receivedName);
+		});
 	});
 });
 // io.on('connection', function(socket){

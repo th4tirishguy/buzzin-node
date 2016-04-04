@@ -1,0 +1,16 @@
+#roomIdHeading {
+	margin-top: 20px;
+}
+#userListHeading {
+	margin-top: 20px;
+}
+#answer {
+	width: 140px;
+}
+#reset {
+	width: 140px;
+	margin-top: 5px;
+}
+#displayName {
+	display: none;
+}
