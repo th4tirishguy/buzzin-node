@@ -1,0 +1,7 @@
+extends layout
+block content
+	p Enter the name of the room you would like to join/create and display name
+	form(action='/join', method='post')
+		input(type='text', name='roomId', placeholder='Room name')
+		input(type='text', name='displayName', placeholder='Display name')
+		button(type='submit') Go
